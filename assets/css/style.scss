@@ -1,8 +1,10 @@
+@use "sass:string";
 @import "./_partials/variables";
 @import "./_partials/reset";
 @import "./_partials/layout";
 @import "./_partials/text";
 @import "./_partials/btn";
+@import "./_partials/card";
 
 // Mobile First
 
@@ -73,6 +75,81 @@
     .btn{
       background: linear-gradient($color-secondary, $color-primary);
     }
+
+  }
+
+}
+
+  // Home Feature
+#Home-feature{
+
+  .feature-container{
+
+    gap: 20px;
+
+    .feature{
+      position: relative;
+      background: #f7f7f7;
+      border-radius: 20px;
+      padding: 1.6rem 2rem;
+      width: 98%;
+      margin-left: 2%;
+      box-sizing: border-box;
+      box-shadow: 0 5px 10px rgba(#000, .1);
+
+      @include flex(row, flex-start, center);
+
+      i{
+        color: #7e7e7e;
+        margin-right: 2rem;
+        font-size: 1.2rem;
+      }
+
+      &.active, &:hover{
+
+        background: #f5edff;
+
+        i{
+          color: $color-primary;
+        }
+      }
+
+      &:before{
+        position: absolute;
+        content: "";
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        left: 0;
+        background: $color-primary;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-txt-secondary;
+        @include flex(row, center, center);
+      }
+
+      @for $i from 1 through 3{
+
+        &:nth-child(#{$i}):before{
+          content: string.quote(#{$i});
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+  // Home Restaurant
+#Home-restaurant{
+
+  background: #f7f7f7;
+
+  .restaurant-container{
+
+    gap: 30px;
 
   }
 

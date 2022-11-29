@@ -1,0 +1,68 @@
+// Cards
+
+.card{
+
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  color: $color-txt-primary;
+
+  *{
+    color: inherit;
+    background: inherit;
+  }
+
+  .card-img-container{
+    position: relative;
+    overflow: hidden;
+    padding-top: 50%;
+
+    .card-img{
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+    }
+
+    .card-label-container{
+
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      top: 0;
+
+      .card-label{
+        padding: .4rem .8rem;
+        background: $color-tertiary;
+        color: darken($color-tertiary, 40%);
+        font-weight: 500;
+        position: absolute;
+        top: .8rem;
+        right: .8rem;
+        border-radius: 2px;
+        font-size: .9rem;
+      }
+
+    }
+
+    img{
+      width: 100%;
+    }
+
+  }
+
+  .card-info{
+
+    padding: .8rem;
+    @include flex(row, space-between, center);
+
+    .card-info-title{
+      margin-bottom: .2rem;
+    }
+
+  }
+
+}

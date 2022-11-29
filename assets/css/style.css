@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 html, body, h1, h2, h3, h4, h5, h6, p, input, button, div {
   padding: 0;
   margin: 0;
@@ -21,7 +21,7 @@ input {
   max-width: 1400px;
   margin: auto;
   box-sizing: border-box;
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .d-flex {
@@ -288,6 +288,60 @@ input {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  color: #101010;
+}
+.card * {
+  color: inherit;
+  background: inherit;
+}
+.card .card-img-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 50%;
+}
+.card .card-img-container .card-img {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.card .card-img-container .card-label-container {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+}
+.card .card-img-container .card-label-container .card-label {
+  padding: 0.4rem 0.8rem;
+  background: #99e2d0;
+  color: #278870;
+  font-weight: 500;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  border-radius: 2px;
+  font-size: 0.9rem;
+}
+.card .card-img-container img {
+  width: 100%;
+}
+.card .card-info {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .card-info .card-info-title {
+  margin-bottom: 0.2rem;
+}
+
 .page-header {
   position: relative;
   z-index: 16;
@@ -331,6 +385,67 @@ input {
 }
 #Home-header .home-header-info .btn {
   background: linear-gradient(#ff79da, #9356dc);
+}
+
+#Home-feature .feature-container {
+  gap: 20px;
+}
+#Home-feature .feature-container .feature {
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 20px;
+  padding: 1.6rem 2rem;
+  width: 98%;
+  margin-left: 2%;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#Home-feature .feature-container .feature i {
+  color: #7e7e7e;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+#Home-feature .feature-container .feature.active, #Home-feature .feature-container .feature:hover {
+  background: #f5edff;
+}
+#Home-feature .feature-container .feature.active i, #Home-feature .feature-container .feature:hover i {
+  color: #9356dc;
+}
+#Home-feature .feature-container .feature:before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 0;
+  background: #9356dc;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#Home-feature .feature-container .feature:nth-child(1):before {
+  content: "1";
+}
+#Home-feature .feature-container .feature:nth-child(2):before {
+  content: "2";
+}
+#Home-feature .feature-container .feature:nth-child(3):before {
+  content: "3";
+}
+
+#Home-restaurant {
+  background: #f7f7f7;
+}
+#Home-restaurant .restaurant-container {
+  gap: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
