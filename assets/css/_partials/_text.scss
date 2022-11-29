@@ -1,0 +1,50 @@
+// Font
+*{
+  font-family: $font-primary;
+}
+
+.font-secondary{
+  font-family: $font-secondary;
+}
+
+// Sizing
+
+.page-title{
+  font-size: 2rem;
+}
+
+.section-title{
+  font-size: 1.6rem;
+}
+
+// Positioning
+
+.txt-center{
+  text-align: center;
+}
+
+.txt-left{
+  text-align: left;
+}
+
+.txt-right{
+  text-align: right;
+}
+
+.txt-justify{
+  text-align: justify;
+}
+
+// Weight / Style
+
+
+@each $i,$val in $font-weight{
+
+  .txt-#{$i}{
+    font-weight: $val;
+  }
+
+}
+
+
+

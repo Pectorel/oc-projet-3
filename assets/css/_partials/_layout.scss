@@ -1,0 +1,69 @@
+// Mixins
+@mixin flex($direction: column,$justify: space-between, $align: stretch){
+
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+
+}
+
+// Layout classes
+.container{
+
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 1.5rem;
+
+}
+
+.d-flex{
+  @include flex();
+}
+
+.d-block{
+  display: block;
+}
+
+.d-i-block{
+  display: inline-block;
+}
+
+// Margins / Padding
+@each $i,$val in $margins{
+
+  .mb-#{$i}{
+    margin-bottom: $val;
+  }
+
+  .ml-#{$i}{
+    margin-left: $val;
+  }
+
+  .my-#{$i}{
+    margin: $val 0;
+  }
+
+  .mx-#{$i}{
+    margin: 0 $val;
+  }
+
+  .pb-#{$i}{
+    padding-bottom: $val;
+  }
+
+  .pl-#{$i}{
+    padding-left: $val;
+  }
+
+  .py-#{$i}{
+    padding: $val 0;
+  }
+
+  .px-#{$i}{
+    padding: 0 $val;
+  }
+
+}

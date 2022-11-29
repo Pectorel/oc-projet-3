@@ -1,14 +1,51 @@
-// Font Import
+// General
+
+  // Font Import
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap');
 
-// Colors
+  // Colors
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$color-grey: #353535;
+$color-bg-footer: $color-grey;
 $color-txt-primary: #101010;
+$color-txt-secondary: #fff;
 
-// Font
+  // Font
 $font-primary: "Roboto", sans-serif;
 $font-secondary: "Shrikhand", cursive;
 
+
+// ============== End General ==============
+
+// Layout
+
+  // Margin / Padding
+  $margins:(
+    "1": .5rem,
+    "2": 1rem,
+    "3": 1.5rem,
+    "4": 2rem,
+    "5": 4rem,
+    "6": 8rem
+  );
+
+// Text
+
+  // Weight / Style
+
+  $font-weight:(
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+  );
+
+// Buttons
+$default-btn-bg: $color-primary;
+$default-btn-txt-color: $color-txt-secondary;
+$default-btn-font-size: inherit;
+$default-btn-radius: 25px;
+$default-btn-padding: 1rem;
 

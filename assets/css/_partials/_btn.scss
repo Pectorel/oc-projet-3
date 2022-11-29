@@ -1,0 +1,20 @@
+// Mixin
+@mixin btn($bg: $default-btn-bg,
+$txt-color: $default-btn-txt-color,
+$font-size: $default-btn-font-size,
+$radius: $default-btn-radius,
+$padding: $default-btn-padding)
+{
+
+  background: $bg;
+  color: $txt-color;
+  font-size: $font-size;
+  border-radius: $radius;
+  padding: $padding;
+  box-shadow: 0 3px 6px rgba(#000, .2);
+
+}
+
+.btn{
+  @include btn();
+}

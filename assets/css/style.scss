@@ -1,2 +1,79 @@
 @import "./_partials/variables";
 @import "./_partials/reset";
+@import "./_partials/layout";
+@import "./_partials/text";
+@import "./_partials/btn";
+
+// Mobile First
+
+// Header
+.page-header{
+
+  position: relative;
+  z-index: 16;
+  padding: .9rem .2rem .4rem .2rem;
+  box-shadow: 0 0 6px rgba(#000, .2);
+
+  .page-title{
+    text-align: center;
+  }
+
+}
+
+// Footer
+.page-footer{
+  background: $color-bg-footer;
+  color: $color-txt-secondary;
+
+  *{
+    color: inherit;
+  }
+
+  .page-footer-content{
+    gap: .8rem;
+
+    .page-footer-title{
+      font-size: 1.2rem;
+    }
+
+    i.fa-handshake-angle{
+      font-size: .7rem;
+    }
+
+  }
+
+
+
+}
+
+// Home
+
+  // Home Header
+#Home-header{
+
+  .location{
+    background: #eaeaea;
+    color: $color-grey;
+
+    *{
+      color: inherit;
+    }
+
+    i{
+      position: relative;
+      left: -10px;
+    }
+
+  }
+
+  .home-header-info{
+
+    background: #f7f7f7;
+
+    .btn{
+      background: linear-gradient($color-secondary, $color-primary);
+    }
+
+  }
+
+}

@@ -4,12 +4,333 @@ html, body, h1, h2, h3, h4, h5, h6, p, input, button, div {
   margin: 0;
 }
 
+body {
+  font-size: 1em;
+}
+
 a {
   text-decoration: none;
 }
 
 input {
   outline: none !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-i-block {
+  display: inline-block;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 0.5rem;
+}
+
+.my-1 {
+  margin: 0.5rem 0;
+}
+
+.mx-1 {
+  margin: 0 0.5rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.5rem;
+}
+
+.pl-1 {
+  padding-left: 0.5rem;
+}
+
+.py-1 {
+  padding: 0.5rem 0;
+}
+
+.px-1 {
+  padding: 0 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.ml-2 {
+  margin-left: 1rem;
+}
+
+.my-2 {
+  margin: 1rem 0;
+}
+
+.mx-2 {
+  margin: 0 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 1rem;
+}
+
+.pl-2 {
+  padding-left: 1rem;
+}
+
+.py-2 {
+  padding: 1rem 0;
+}
+
+.px-2 {
+  padding: 0 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+.ml-3 {
+  margin-left: 1.5rem;
+}
+
+.my-3 {
+  margin: 1.5rem 0;
+}
+
+.mx-3 {
+  margin: 0 1.5rem;
+}
+
+.pb-3 {
+  padding-bottom: 1.5rem;
+}
+
+.pl-3 {
+  padding-left: 1.5rem;
+}
+
+.py-3 {
+  padding: 1.5rem 0;
+}
+
+.px-3 {
+  padding: 0 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.ml-4 {
+  margin-left: 2rem;
+}
+
+.my-4 {
+  margin: 2rem 0;
+}
+
+.mx-4 {
+  margin: 0 2rem;
+}
+
+.pb-4 {
+  padding-bottom: 2rem;
+}
+
+.pl-4 {
+  padding-left: 2rem;
+}
+
+.py-4 {
+  padding: 2rem 0;
+}
+
+.px-4 {
+  padding: 0 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 4rem;
+}
+
+.ml-5 {
+  margin-left: 4rem;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.mx-5 {
+  margin: 0 4rem;
+}
+
+.pb-5 {
+  padding-bottom: 4rem;
+}
+
+.pl-5 {
+  padding-left: 4rem;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.px-5 {
+  padding: 0 4rem;
+}
+
+.mb-6 {
+  margin-bottom: 8rem;
+}
+
+.ml-6 {
+  margin-left: 8rem;
+}
+
+.my-6 {
+  margin: 8rem 0;
+}
+
+.mx-6 {
+  margin: 0 8rem;
+}
+
+.pb-6 {
+  padding-bottom: 8rem;
+}
+
+.pl-6 {
+  padding-left: 8rem;
+}
+
+.py-6 {
+  padding: 8rem 0;
+}
+
+.px-6 {
+  padding: 0 8rem;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-secondary {
+  font-family: "Shrikhand", cursive;
+}
+
+.page-title {
+  font-size: 2rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-justify {
+  text-align: justify;
+}
+
+.txt-light {
+  font-weight: 300;
+}
+
+.txt-regular {
+  font-weight: 400;
+}
+
+.txt-medium {
+  font-weight: 500;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.btn {
+  background: #9356dc;
+  color: #fff;
+  font-size: inherit;
+  border-radius: 25px;
+  padding: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.page-header {
+  position: relative;
+  z-index: 16;
+  padding: 0.9rem 0.2rem 0.4rem 0.2rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.page-header .page-title {
+  text-align: center;
+}
+
+.page-footer {
+  background: #353535;
+  color: #fff;
+}
+.page-footer * {
+  color: inherit;
+}
+.page-footer .page-footer-content {
+  gap: 0.8rem;
+}
+.page-footer .page-footer-content .page-footer-title {
+  font-size: 1.2rem;
+}
+.page-footer .page-footer-content i.fa-handshake-angle {
+  font-size: 0.7rem;
+}
+
+#Home-header .location {
+  background: #eaeaea;
+  color: #353535;
+}
+#Home-header .location * {
+  color: inherit;
+}
+#Home-header .location i {
+  position: relative;
+  left: -10px;
+}
+#Home-header .home-header-info {
+  background: #f7f7f7;
+}
+#Home-header .home-header-info .btn {
+  background: linear-gradient(#ff79da, #9356dc);
 }
 
 /*# sourceMappingURL=style.css.map */
