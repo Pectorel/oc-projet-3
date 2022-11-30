@@ -289,11 +289,12 @@ input {
 }
 
 .card {
-  border-radius: 12px;
+  border-radius: 18px;
   overflow: hidden;
   width: 100%;
   background: #fff;
   color: #101010;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 .card * {
   color: inherit;
@@ -302,11 +303,11 @@ input {
 .card .card-img-container {
   position: relative;
   overflow: hidden;
-  padding-top: 50%;
+  padding-top: 52%;
 }
 .card .card-img-container .card-img {
   position: absolute;
-  top: 35%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -332,7 +333,7 @@ input {
   width: 100%;
 }
 .card .card-info {
-  padding: 0.8rem;
+  padding: 1rem 0.8rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -360,10 +361,10 @@ input {
   color: inherit;
 }
 .page-footer .page-footer-content {
-  gap: 0.8rem;
+  gap: 10px;
 }
 .page-footer .page-footer-content .page-footer-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .page-footer .page-footer-content i.fa-handshake-angle {
   font-size: 0.7rem;
@@ -445,7 +446,7 @@ input {
   background: #f7f7f7;
 }
 #Home-restaurant .restaurant-container {
-  gap: 30px;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

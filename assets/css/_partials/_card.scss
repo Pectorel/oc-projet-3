@@ -2,11 +2,13 @@
 
 .card{
 
-  border-radius: 12px;
+  border-radius: 18px;
   overflow: hidden;
   width: 100%;
   background: #fff;
   color: $color-txt-primary;
+  box-shadow: 0 5px 8px rgba(#000, .1);
+
 
   *{
     color: inherit;
@@ -16,11 +18,11 @@
   .card-img-container{
     position: relative;
     overflow: hidden;
-    padding-top: 50%;
+    padding-top: 52%;
 
     .card-img{
       position: absolute;
-      top: 35%;
+      top: 36%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1;
@@ -56,7 +58,7 @@
 
   .card-info{
 
-    padding: .8rem;
+    padding: 1rem .8rem;
     @include flex(row, space-between, center);
 
     .card-info-title{
