@@ -5,19 +5,28 @@
 @import "./_partials/text";
 @import "./_partials/btn";
 @import "./_partials/card";
+@import "./_partials/loader";
 
-// Mobile First
 
 // Header
 .page-header{
 
   position: relative;
   z-index: 16;
-  padding: .9rem .2rem .4rem .2rem;
+  padding: .9rem 1rem .4rem 1rem;
   box-shadow: 0 0 6px rgba(#000, .2);
 
   .page-title{
     text-align: center;
+  }
+
+  .back-link{
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: $color-grey;
   }
 
 }
@@ -71,10 +80,6 @@
   .home-header-info{
 
     background: #f7f7f7;
-
-    .btn{
-      background: linear-gradient($color-secondary, $color-primary);
-    }
 
   }
 
@@ -151,6 +156,140 @@
 
     gap: 20px;
 
+
+  }
+
+}
+
+
+// Menu Page
+
+  // Menu Header
+#Menu-header{
+
+  height: 68vw;
+  width: 100%;
+  background: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center center;
+  background-size: cover;
+
+}
+
+  // Menu List
+
+#Menu-list{
+  background: #f7f7f7;
+
+}
+
+.menu-list-content {
+  background: inherit;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -40px;
+  padding-top: 2rem;
+
+  .menu-list-header{
+
+    @include flex(row, flex-start, center);
+    gap: 30px;
+
+    .section-title{
+      font-size: 1.7rem;
+    }
+
+    i{
+      font-size: 1.6rem;
+    }
+  }
+
+  .menu-choice-container{
+
+    gap: 14px;
+
+    .menu-choice-container-title{
+      font-size: 1.1rem;
+      position: relative;
+
+
+      &:before{
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 3rem;
+        background: $color-tertiary;
+        bottom: 0;
+        left: 0;
+      }
+
+    }
+
+    .menu-choice{
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .menu-info{
+
+        padding: .6rem .8rem;
+        flex-grow: 1;
+        flex-basis: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .menu-info-title{
+          font-size: 1.2rem;
+          margin-bottom: .2rem;
+        }
+
+      }
+
+      .is-selected-container{
+
+        overflow: hidden;
+        width: 0;
+        position: relative;
+        background: $color-tertiary;
+        transition: width .3s ease-in;
+
+        i{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotateZ(0deg);
+          background: #fff;
+          border-radius: 50%;
+          padding: .4rem;
+          color: $color-tertiary;
+
+          transition: all 0s;
+        }
+
+      }
+
+      &:hover{
+
+        .is-selected-container{
+          width: 16%;
+
+
+          i{
+            transform: translate(-50%, -50%) rotateZ(360deg);
+            transition: transform .3s linear;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .button-container{
+
+    .btn{
+      @include px(3rem);
+    }
 
   }
 

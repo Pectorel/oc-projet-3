@@ -37,7 +37,6 @@
 
 // Weight / Style
 
-
 @each $i,$val in $font-weight{
 
   .txt-#{$i}{
@@ -46,5 +45,20 @@
 
 }
 
+.txt-i{
+  font-style: italic;
+}
 
+// Letters
 
+.txt-upper{
+  text-transform: uppercase;
+}
+
+.txt-lower{
+  text-transform: lowercase;
+}
+
+.txt-cap{
+  text-transform: capitalize;
+}

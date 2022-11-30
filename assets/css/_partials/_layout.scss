@@ -23,6 +23,10 @@
   @include flex();
 }
 
+.d-flex-row{
+  @include flex(row);
+}
+
 .d-block{
   display: block;
 }
@@ -32,6 +36,16 @@
 }
 
 // Margins / Padding
+@mixin px($val){
+  padding-left: $val;
+  padding-right: $val;
+}
+
+@mixin py($val){
+  padding-top: $val;
+  padding-bottom: $val;
+}
+
 @each $i,$val in $margins{
 
   .mb-#{$i}{
@@ -59,11 +73,11 @@
   }
 
   .py-#{$i}{
-    padding: $val 0;
+    @include py($val)
   }
 
   .px-#{$i}{
-    padding: 0 $val;
+    @include px($val)
   }
 
 }

@@ -22,28 +22,28 @@ $font-secondary: "Shrikhand", cursive;
 // Layout
 
   // Margin / Padding
-  $margins:(
-    "1": .5rem,
-    "2": 1rem,
-    "3": 1.5rem,
-    "4": 2rem,
-    "5": 4rem,
-    "6": 8rem
-  );
+$margins:(
+  "1": .5rem,
+  "2": 1rem,
+  "3": 1.5rem,
+  "4": 2rem,
+  "5": 4rem,
+  "6": 8rem
+);
 
 // Text
 
   // Weight / Style
 
-  $font-weight:(
-    "light": 300,
-    "regular": 400,
-    "medium": 500,
-    "bold": 700
-  );
+$font-weight:(
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
 
 // Buttons
-$default-btn-bg: $color-primary;
+$default-btn-bg: linear-gradient($color-secondary, $color-primary);
 $default-btn-txt-color: $color-txt-secondary;
 $default-btn-font-size: inherit;
 $default-btn-radius: 25px;

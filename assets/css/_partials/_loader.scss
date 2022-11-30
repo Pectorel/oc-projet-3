@@ -1,0 +1,102 @@
+// Loader
+
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 20;
+  animation: opacity 0s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  .loader-content{
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+
+  }
+}
+
+
+  // Animation
+.loader-anim-grow-shrink{
+
+  $duration: .6s;
+  $type: ease-in;
+  span{
+
+
+    font: inherit;
+    font-size: 2rem;
+    display: inline-block;
+    @for $i from 1 through 3{
+
+      &:nth-child(#{$i}){
+        animation: grow-shrink-#{$i} $duration $type infinite alternate;
+      }
+
+    }
+
+  }
+
+}
+
+@keyframes grow-shrink-1 {
+  0%{
+    font-size: 2rem;
+  }
+  30%{
+    font-size: 3rem;
+  }
+  100%{
+    font-size: 3rem;
+  }
+}
+
+@keyframes grow-shrink-2 {
+  0%, 30%{
+    font-size: 2rem;
+  }
+  60%{
+    font-size: 3rem;
+  }
+  70%, 100%{
+    font-size: 3rem;
+  }
+}
+
+@keyframes grow-shrink-3 {
+  0%, 60%{
+    font-size: 2rem;
+  }
+  90%{
+    font-size: 3rem;
+  }
+  100%{
+    font-size: 3rem;
+  }
+}
+
+@keyframes opacity {
+
+  0%{
+    opacity: 1;
+    display: block;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+
+}

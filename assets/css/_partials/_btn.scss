@@ -12,6 +12,31 @@ $padding: $default-btn-padding)
   border-radius: $radius;
   padding: $padding;
   box-shadow: 0 3px 6px rgba(#000, .2);
+  position: relative;
+  transition: all .2s ease-in-out;
+
+  &:after{
+    opacity: 0;
+    content: "";
+    transition: all .2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: rgba(#fff, .16);
+    border-radius: $radius;
+  }
+
+  &:hover{
+
+    box-shadow: 0 3px 8px rgba(#000, .6);
+    &:after{
+      opacity: 1;
+    }
+
+  }
 
 }
 
