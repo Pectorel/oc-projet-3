@@ -621,13 +621,14 @@ input {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  justify-content: space-between;
 }
 .menu-list-content .menu-list-header .section-title {
   font-size: 1.7rem;
 }
 .menu-list-content .menu-list-header i {
   font-size: 1.6rem;
+  padding-right: 1rem;
 }
 .menu-list-content .menu-choice-container {
   gap: 14px;
@@ -660,6 +661,14 @@ input {
 .menu-list-content .menu-choice-container .menu-choice .menu-info .menu-info-title {
   font-size: 1.2rem;
   margin-bottom: 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-list-content .menu-choice-container .menu-choice .menu-info .menu-info-details-container {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  justify-content: space-between;
+  padding-right: 0.8rem;
 }
 .menu-list-content .menu-choice-container .menu-choice .is-selected-container {
   overflow: hidden;
@@ -680,7 +689,7 @@ input {
   transition: all 0s;
 }
 .menu-list-content .menu-choice-container .menu-choice:hover .is-selected-container {
-  width: 16%;
+  width: 60px;
 }
 .menu-list-content .menu-choice-container .menu-choice:hover .is-selected-container i {
   transform: translate(-50%, -50%) rotateZ(360deg);
@@ -689,6 +698,19 @@ input {
 .menu-list-content .button-container .btn {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+@media (min-width: 768px) {
+  .restaurant-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .restaurant-container .card {
+    margin-bottom: 0;
+  }
+  #Menu-header {
+    height: 30vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

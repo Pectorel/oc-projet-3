@@ -191,7 +191,7 @@
   .menu-list-header{
 
     @include flex(row, flex-start, center);
-    gap: 30px;
+    justify-content: space-between;
 
     .section-title{
       font-size: 1.7rem;
@@ -199,6 +199,7 @@
 
     i{
       font-size: 1.6rem;
+      padding-right: 1rem;
     }
   }
 
@@ -240,6 +241,15 @@
         .menu-info-title{
           font-size: 1.2rem;
           margin-bottom: .2rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .menu-info-details-container{
+          text-overflow: ellipsis;
+          overflow: hidden;
+          justify-content: space-between;
+          padding-right: .8rem;
         }
 
       }
@@ -270,7 +280,7 @@
       &:hover{
 
         .is-selected-container{
-          width: 16%;
+          width: 60px;
 
 
           i{
@@ -291,6 +301,29 @@
       @include px(3rem);
     }
 
+  }
+
+}
+
+
+// Responsive
+
+  // Tablet
+@media (min-width: 768px) {
+
+  // Home
+  .restaurant-container{
+    flex-direction: row;
+    align-items: stretch;
+
+    .card{
+      margin-bottom: 0;
+    }
+  }
+
+  // Menu
+  #Menu-header{
+    height: 30vw;
   }
 
 }
