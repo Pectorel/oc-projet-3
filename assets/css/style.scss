@@ -57,6 +57,44 @@
 
 }
 
+// Heart Logo
+
+.heart-logo{
+
+  width: $heart-width;
+  cursor: pointer;
+
+  &+.fill-container{
+
+    position: absolute;
+    top: 100%;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    background: transparent;
+    transition: top .3s ease-out;
+    overflow: hidden;
+    pointer-events: none;
+
+    .fill-heart-logo{
+      width: $heart-width;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+  }
+
+  &:hover{
+
+    &+.fill-container{
+      top: 0;
+    }
+
+  }
+
+}
+
 // Home
 
   // Home Header
@@ -101,7 +139,6 @@
       margin-left: 2%;
       box-sizing: border-box;
       box-shadow: 0 5px 10px rgba(#000, .1);
-
       @include flex(row, flex-start, center);
 
       i{
@@ -156,7 +193,6 @@
 
     gap: 20px;
 
-
   }
 
 }
@@ -197,10 +233,11 @@
       font-size: 1.7rem;
     }
 
-    i{
-      font-size: 1.6rem;
-      padding-right: 1rem;
+    .menu-list-logo-container{
+      padding-right: 1em;
+      position: relative;
     }
+
   }
 
   .menu-choice-container{
@@ -226,17 +263,21 @@
 
     .menu-choice{
 
-      overflow: hidden;
-      text-overflow: ellipsis;
       white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      opacity: 0;
+
+
 
       .menu-info{
 
-        padding: .6rem .8rem;
+        padding: .6rem;
         flex-grow: 1;
         flex-basis: auto;
         overflow: hidden;
         text-overflow: ellipsis;
+        box-sizing: border-box;
 
         .menu-info-title{
           font-size: 1.2rem;
@@ -248,8 +289,19 @@
         .menu-info-details-container{
           text-overflow: ellipsis;
           overflow: hidden;
-          justify-content: space-between;
-          padding-right: .8rem;
+          position: relative;
+          padding-right: 3rem;
+
+
+          .menu-info-price{
+
+            position: absolute;
+            top: 50%;
+            right: .4rem;
+            transform: translateY(-50%);
+
+          }
+
         }
 
       }
@@ -279,6 +331,10 @@
 
       &:hover{
 
+        .menu-info{
+          width: calc(100% - 60px);
+        }
+
         .is-selected-container{
           width: 60px;
 
@@ -304,6 +360,34 @@
   }
 
 }
+
+// Menu Animation
+
+.menu-choice{
+
+  $menu-anim-delay: .12s;
+
+  @for $i from 2 through 5{
+
+    &:nth-child(#{$i})
+    {
+      animation: reveal-bottom .6s calc($i*$menu-anim-delay) ease-out forwards;
+    }
+  }
+
+}
+
+@keyframes reveal-bottom {
+  0%{
+    opacity: 0;
+    top: 40px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
+}
+
 
 
 // Responsive

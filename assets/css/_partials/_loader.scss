@@ -1,5 +1,6 @@
 // Loader
 
+ // Mettre uniquement sur la page d'accueil
 .loader{
   position: fixed;
   top: 0;
@@ -21,6 +22,8 @@
     width: 100%;
 
 
+
+
   }
 }
 
@@ -28,20 +31,37 @@
   // Animation
 .loader-anim-grow-shrink{
 
-  $duration: .6s;
-  $type: ease-in;
+  $duration: 1.2s;
+  $type: ease-out;
+  $initial-offset: 46%;
+
   span{
 
 
+    position: absolute;
+    left: $initial-offset;
+    transform: translateX(-50%);
     font: inherit;
     font-size: 2rem;
     display: inline-block;
+    /*text-shadow: 3px 0 $color-tertiary, -3px 0 $color-tertiary, 0 3px $color-tertiary, 0 -3px $color-tertiary,
+    2px 2px $color-tertiary, -2px 0 $color-tertiary, 0 2px $color-tertiary, 0 -2px $color-tertiary,
+    1px 1px $color-tertiary, -1px -1px $color-tertiary, 1px -1px $color-tertiary, -1px 1px $color-tertiary;*/
     @for $i from 1 through 3{
 
       &:nth-child(#{$i}){
-        animation: grow-shrink-#{$i} $duration $type infinite alternate;
+        animation: grow-shrink-#{$i} $duration $type infinite;
       }
 
+    }
+
+    &:nth-child(1)
+    {
+      left: $initial-offset - 13;
+    }
+
+    &:nth-child(3){
+      left: $initial-offset + 17.4;
     }
 
   }
@@ -52,11 +72,11 @@
   0%{
     font-size: 2rem;
   }
-  30%{
+  20%{
     font-size: 3rem;
   }
-  100%{
-    font-size: 3rem;
+  30%, 100%{
+    font-size: 2rem;
   }
 }
 
@@ -64,11 +84,12 @@
   0%, 30%{
     font-size: 2rem;
   }
-  60%{
+  50%{
+    z-index: 2;
     font-size: 3rem;
   }
-  70%, 100%{
-    font-size: 3rem;
+  60%, 100%{
+    font-size: 2rem;
   }
 }
 
@@ -76,12 +97,13 @@
   0%, 60%{
     font-size: 2rem;
   }
-  90%{
+  80%{
     font-size: 3rem;
   }
-  100%{
-    font-size: 3rem;
+  90%, 100%{
+    font-size: 2rem;
   }
+
 }
 
 @keyframes opacity {

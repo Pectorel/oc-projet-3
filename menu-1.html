@@ -11,14 +11,6 @@
 </head>
 <body>
 
-<div class="loader">
-    <div class="loader-content txt-center">
-        <p class="loader-anim-grow-shrink font-secondary">
-            <span>oh</span><span>my</span><span>food</span>
-        </p>
-    </div>
-</div>
-
 <header class="page-header">
     <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i></a>
     <h1 class="font-secondary page-title txt-regular">ohmyfood</h1>
@@ -32,7 +24,12 @@
         <div class="menu-list-content container">
             <div class="menu-list-header mb-3">
                 <h2 class="section-title font-secondary txt-regular">La palette du goût</h2>
-                <i class="fa-regular fa-heart"></i>
+                <div class="menu-list-logo-container">
+                    <img class="card-like-logo heart-logo" src="assets/img/icons/heart.png" alt="Like">
+                    <div class="fill-container">
+                        <img class="fill-heart-logo" src="assets/img/icons/heart-fill.png" alt="Liked">
+                    </div>
+                </div>
             </div>
 
             <div class="menu-choice-container d-flex mb-4">
@@ -41,7 +38,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Fricassée d'escargots</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">Au piment d'Espelette</span>
                             <span class="menu-info-price txt-medium">25€</span>
                         </div>
@@ -55,7 +52,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Foie gras de canard mi-cuit</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">Et ses copeaux de truffe noire</span>
                             <span class="menu-info-price txt-medium">35€</span>
                         </div>
@@ -68,7 +65,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Œuf au plat</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">Assaisonné à la truffe sur lit de caviar</span>
                             <span class="menu-info-price txt-medium">20€</span>
                         </div>
@@ -86,7 +83,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Filet de boeuf aux herbes</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">Accompagné de sa ribambelle de légumes</span>
                             <span class="menu-info-price txt-medium">40€</span>
                         </div>
@@ -99,7 +96,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Parmentier de queue de boeuf</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">À la truffe noire sur sa purée de panais</span>
                             <span class="menu-info-price txt-medium">35€</span>
                         </div>
@@ -112,7 +109,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Filet de turbot</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">Aux agrumes</span>
                             <span class="menu-info-price txt-medium">44€</span>
                         </div>
@@ -130,7 +127,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Paris-Brest</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">Revisité</span>
                             <span class="menu-info-price txt-medium">18€</span>
                         </div>
@@ -143,7 +140,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Macaron au chocolat d'exception</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">Et glace à la vanille de Madagascar</span>
                             <span class="menu-info-price txt-medium">22€</span>
                         </div>
@@ -156,7 +153,7 @@
                 <article class="card-horizontal menu-choice d-flex-row">
                     <div class="menu-info">
                         <h4 class="menu-info-title txt-medium">Mousse au chocolat</h4>
-                        <div class="d-flex-row menu-info-details-container">
+                        <div class="menu-info-details-container">
                             <span class="menu-info-details txt-light">Au piment d'Espelette et à la truffe noire</span>
                             <span class="menu-info-price txt-medium">23€</span>
                         </div>
@@ -191,7 +188,7 @@
             <span class="ml-1">Devenir partenaire</span>
         </a>
         <a href="#" class="txt-light">Mentions légales</a>
-        <a href="#" class="mb-2 txt-light">Contact</a>
+        <a href="mailto:contact@ohmyfood.fr" class="mb-2 txt-light">Contact</a>
     </div>
 </footer>
 
