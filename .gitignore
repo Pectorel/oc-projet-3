@@ -1,0 +1,3 @@
+# Only push scss files
+*.css
+*.css.map
