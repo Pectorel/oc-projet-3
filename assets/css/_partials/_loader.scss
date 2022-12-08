@@ -18,10 +18,8 @@
 
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-
-
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 
   }
@@ -33,14 +31,14 @@
 
   $duration: 1.2s;
   $type: ease-out;
-  $initial-offset: 46%;
 
   span{
 
 
     position: absolute;
-    left: $initial-offset;
-    transform: translateX(-50%);
+    left: -3.4rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font: inherit;
     font-size: 2rem;
     display: inline-block;
@@ -55,13 +53,13 @@
 
     }
 
-    &:nth-child(1)
+    &:nth-child(2)
     {
-      left: $initial-offset - 13;
+      margin-left: 48px;
     }
 
     &:nth-child(3){
-      left: $initial-offset + 17.4;
+      margin-left: 112px;
     }
 
   }
