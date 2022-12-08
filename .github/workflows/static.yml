@@ -31,10 +31,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Sass Build
-      uses: gha-utilities/sass-build@v0.4.10
-      with:
-        source: /assets/css/style.scss
-        destination: /assets/css/style.css
+        uses: gha-utilities/sass-build@v0.4.10
+        with:
+          source: /assets/css/style.scss
+          destination: /assets/css/style.css
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
